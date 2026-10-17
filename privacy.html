@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy · Tomte</title>
+<meta name="description" content="What the Tomte app for Windows stores, what it sends, and when.">
+<meta name="theme-color" content="#121214">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="island" id="island">
+  <button class="island-pill" aria-expanded="false" aria-controls="island-links">
+    <img src="assets/tomte.png" alt="" width="24" height="24">Tomte
+  </button>
+  <nav class="island-links" id="island-links" aria-label="Site">
+    <a href="index.html">Home</a>
+    <a href="index.html#features">Features</a>
+    <a href="index.html#download">Download</a>
+    <a href="https://github.com/xditya/tomte-windows">GitHub</a>
+  </nav>
+</header>
+
+<main class="doc">
+  <h1>Privacy policy</h1>
+  <p class="date">Effective October 17, 2026</p>
+
+  <div class="short">
+    <ul>
+      <li>Tomte has no account, no analytics, no crash reporting and no update check. The developer receives nothing from it.</li>
+      <li>What Tomte keeps stays on your PC.</li>
+      <li>Something leaves your PC only when you send it to an AI provider you set up, or open a link or a web search in your browser.</li>
+    </ul>
+  </div>
+
+  <h2>Who this covers</h2>
+  <p>This policy covers the Tomte app for Windows and this website. Tomte is made by Aditya S and is open source, so you can check everything below in its <a href="https://github.com/xditya/tomte-windows">source code</a>.</p>
+
+  <h2>What Tomte keeps on your PC</h2>
+  <p>Tomte stores its data in your Windows user profile, in <code>%LOCALAPPDATA%\Tomte</code>:</p>
+  <ul>
+    <li>your settings;</li>
+    <li>what you put on the Shelf (a link to the file, or a copy when you ask for one);</li>
+    <li>your scratchpad note;</li>
+    <li>clipboard history: the last 50 pieces of text and 50 images you copied. Anything a password manager marks as private is never kept, and you can turn the history off in Settings;</li>
+    <li>AI history: your questions, the answers and their cost, if you keep AI history on;</li>
+    <li>your shortcuts, scheduled jobs, and the things you opened from Search, so they rank first next time;</li>
+    <li>speech-to-text model files, if you add voice.</li>
+  </ul>
+  <p>API keys you enter are stored in Windows Credential Manager, not in that folder.</p>
+  <p>None of this is sent to the developer or to anyone else. You can clear the clipboard and AI history in Settings. Uninstalling Tomte and deleting that folder removes everything.</p>
+
+  <h2>What Tomte sends, and when</h2>
+  <p><strong>AI requests.</strong> AI is optional and off until you add a key. When you send a question, use Circle to ask, drop a file on a drop zone, or run a job you set up, Tomte sends the request straight from your PC to the provider you chose: Anthropic, Google Gemini, an OpenAI-compatible server, or a model running on your own PC such as Ollama. The request holds your question and only the context you included, such as the region you circled, a window's text, a screenshot, a Shelf file or your note. The AI box shows where each request went and what it cost. What the provider does with it is covered by that provider's own terms and privacy policy.</p>
+  <p><strong>Search with AI</strong> sends the names of files, never what is in them.</p>
+  <p><strong>Voice.</strong> By default your recording is turned into text on your PC with whisper.cpp and is not sent anywhere. If you choose a provider for speech-to-text instead, the recording goes to that provider.</p>
+  <p><strong>MCP servers and Agent Skills</strong> you add are run or contacted only for requests you approve.</p>
+  <p><strong>Links and web searches</strong> open in your browser, and the search engine you picked receives the search.</p>
+  <p>Tomte sends nothing else: no analytics, telemetry, crash reports or update checks.</p>
+
+  <h2>Changes to your PC</h2>
+  <p>Tomte can change settings such as dark mode or volume when you ask it to. It asks before each change, and you can undo it.</p>
+
+  <h2>This website</h2>
+  <p>This website sets no cookies and runs no analytics or ads. The service that hosts it may keep standard server logs, such as IP addresses, under its own privacy policy.</p>
+
+  <h2>Children</h2>
+  <p>Tomte is a general-purpose desktop tool and does not knowingly collect information from anyone, including children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the new version is posted on this page with a new date.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about privacy, open an issue at <a href="https://github.com/xditya/tomte-windows/issues">github.com/xditya/tomte-windows/issues</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="index.html"><img src="assets/tomte.png" alt="" width="26" height="26">Tomte</a>
+    <nav aria-label="Footer">
+      <a href="privacy.html">Privacy</a>
+      <a href="https://github.com/xditya/tomte-windows/blob/main/LICENSE">License</a>
+      <a href="https://github.com/xditya/tomte-windows">GitHub</a>
+      <a href="https://github.com/xditya/tomte-windows/issues">Contact</a>
+    </nav>
+    <span>© 2026 Aditya S</span>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
