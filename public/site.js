@@ -56,11 +56,3 @@ if (ghCard) {
     .catch(() => {});
 }
 
-// People who ask for less motion get the posters, with controls to play a clip if they want to.
-if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-  document.querySelectorAll("video[autoplay]").forEach((v) => {
-    v.removeAttribute("autoplay");
-    v.pause();
-    v.controls = true;
-  });
-}

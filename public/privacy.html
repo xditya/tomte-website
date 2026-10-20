@@ -25,7 +25,7 @@
 
 <main class="doc">
   <h1>Privacy policy</h1>
-  <p class="date">Effective October 17, 2026</p>
+  <p class="date">Effective October 20, 2026</p>
 
   <div class="short">
     <ul>
@@ -42,15 +42,15 @@
   <p>Tomte stores its data in your Windows user profile, in <code>%LOCALAPPDATA%\Tomte</code>:</p>
   <ul>
     <li>your settings;</li>
-    <li>what you put on the Shelf (a link to the file, or a copy when you ask for one);</li>
+    <li>what you put on the Shelf (a link to the file, or a copy when you ask for one), and which items you pinned;</li>
     <li>your scratchpad note;</li>
-    <li>clipboard history: the last 50 pieces of text and 50 images you copied. Anything a password manager marks as private is never kept, and you can turn the history off in Settings;</li>
+    <li>clipboard history, if you turn it on in Settings: the last 50 pieces of text and 50 images you copied from the past 7 days, the name of the app each one was copied from, and the items you pinned, which stay until you unpin them. Anything a password manager marks as private is never kept. Turning the history off deletes all of it, pins included;</li>
     <li>AI history: your questions, the answers and their cost, if you keep AI history on;</li>
     <li>your shortcuts, scheduled jobs, and the things you opened from Search, so they rank first next time;</li>
     <li>speech-to-text model files, if you add voice.</li>
   </ul>
   <p>API keys you enter are stored in Windows Credential Manager, not in that folder.</p>
-  <p>None of this is sent to the developer or to anyone else. You can clear the clipboard and AI history in Settings. Uninstalling Tomte and deleting that folder removes everything.</p>
+  <p>None of this is sent to the developer or to anyone else. You can clear the clipboard and AI history in Settings (Clear all keeps pinned clipboard items). Uninstalling Tomte and deleting that folder removes everything.</p>
 
   <h2>What Tomte sends, and when</h2>
   <p><strong>AI requests.</strong> AI is optional and off until you add a key. When you send a question, use Circle to ask, drop a file on a drop zone, or run a job you set up, Tomte sends the request straight from your PC to the provider you chose: Anthropic, Google Gemini, an OpenAI-compatible server, or a model running on your own PC such as Ollama. The request holds your question and only the context you included, such as the region you circled, a window's text, a screenshot, a Shelf file or your note. The AI box shows where each request went and what it cost. What the provider does with it is covered by that provider's own terms and privacy policy.</p>
@@ -59,6 +59,9 @@
   <p><strong>MCP servers and Agent Skills</strong> you add are run or contacted only for requests you approve.</p>
   <p><strong>Links and web searches</strong> open in your browser, and the search engine you picked receives the search.</p>
   <p>Tomte sends nothing else: no analytics, telemetry, crash reports or update checks.</p>
+
+  <h2>What Tomte reads from Windows</h2>
+  <p>To match your taskbar, Tomte reads whether Windows uses a light or dark theme, whether the accent colour shows on the taskbar, and the accent colour itself. It reads these from your Windows settings on your PC and sends them nowhere.</p>
 
   <h2>Changes to your PC</h2>
   <p>Tomte can change settings such as dark mode or volume when you ask it to. It asks before each change, and you can undo it.</p>

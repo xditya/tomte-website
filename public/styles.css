@@ -4,9 +4,13 @@
   --ink: #1c1a17;
   --muted: #69645a;
   --line: #e2ddd2;
-  --island: #121214;
-  --island-ink: #f5f1e8;
-  --island-muted: #a8a397;
+  --island: #111214;
+  --island-raised: #24262b;
+  --island-ink: #f2f0eb;
+  --island-muted: #b1afa9;
+  --island-line: rgba(255, 255, 255, 0.1);
+  --accent: #ff6b4a;
+  --on-accent: #1a0a05;
   --red: #b02a27;
   --stage: #f6f5f2;
   --shadow: 0 1px 2px rgba(28, 26, 23, 0.06), 0 18px 48px rgba(28, 26, 23, 0.12);
@@ -20,7 +24,6 @@
     --ink: #f1ede4;
     --muted: #a29d92;
     --line: #2b2b2f;
-    --island: #000000;
     --red: #e0605a;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 18px 48px rgba(0, 0, 0, 0.45);
     color-scheme: dark;
@@ -40,7 +43,7 @@ body {
 }
 h1, h2, h3 { font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif; }
 a { color: inherit; }
-img, video { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; }
 kbd {
   font: 600 0.82em/1 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
   display: inline-block;
@@ -53,18 +56,19 @@ kbd {
 }
 .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
 
-/* The menu is the product's own pill, hanging from the top edge of the window. */
+/* The menu is the product's own pill, floating just below the top edge of the window. */
 .island {
   position: fixed;
-  top: 0;
+  top: 10px;
   left: 50%;
   z-index: 50;
   transform: translateX(-50%);
   width: 196px;
   background: var(--island);
   color: var(--island-ink);
-  border-radius: 0 0 22px 22px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--island-line);
+  border-radius: 21px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   overflow: hidden;
   transition: width 0.42s var(--spring), border-radius 0.42s var(--spring);
 }
@@ -72,7 +76,7 @@ kbd {
   all: unset;
   box-sizing: border-box;
   width: 100%;
-  height: 44px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +86,7 @@ kbd {
   letter-spacing: -0.01em;
 }
 .island-pill img { width: 24px; height: 24px; }
-.island-pill:focus-visible { outline: 2px solid var(--island-ink); outline-offset: -4px; border-radius: 0 0 20px 20px; }
+.island-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: -4px; border-radius: 20px; }
 .island-links {
   display: flex;
   flex-wrap: wrap;
@@ -100,11 +104,11 @@ kbd {
   padding: 7px 12px;
   border-radius: 999px;
 }
-.island-links a:hover, .island-links a:focus-visible { color: var(--island-ink); background: rgba(255, 255, 255, 0.1); outline: none; }
-.island[data-open="true"] { width: min(560px, 100vw - 24px); border-radius: 0 0 26px 26px; }
+.island-links a:hover, .island-links a:focus-visible { color: var(--island-ink); background: var(--island-raised); outline: none; }
+.island[data-open="true"] { width: min(560px, 100vw - 24px); border-radius: 28px; }
 .island[data-open="true"] .island-links { max-height: 120px; opacity: 1; padding: 0 12px 12px; }
 @media (hover: hover) {
-  .island:hover, .island:focus-within { width: min(560px, 100vw - 24px); border-radius: 0 0 26px 26px; }
+  .island:hover, .island:focus-within { width: min(560px, 100vw - 24px); border-radius: 28px; }
   .island:hover .island-links, .island:focus-within .island-links { max-height: 120px; opacity: 1; padding: 0 12px 12px; }
 }
 
@@ -141,7 +145,7 @@ kbd {
   border: 1px solid var(--line);
   box-shadow: var(--shadow);
 }
-.screen video, .screen img { width: 100%; height: auto; }
+.screen img { width: 100%; height: auto; }
 .hero .screen { margin: 56px auto 0; max-width: 1000px; border-top: 10px solid var(--island); }
 
 /* Sections */
@@ -230,7 +234,7 @@ footer nav a:hover { color: var(--ink); }
   box-shadow: var(--shadow);
 }
 .store-card .rel-meta { justify-content: center; color: var(--island-muted); }
-.store-card .rel-badge { border-color: transparent; background: #b02a27; color: #fff; }
+.store-card .rel-badge { border-color: transparent; background: var(--accent); color: var(--on-accent); }
 .store-card h2 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -0.02em; margin: 14px 0 8px; }
 .store-card > p:not(.rel-meta) { color: var(--island-muted); max-width: 30em; margin: 0 auto 26px; }
 .store-btn { background: var(--island-ink); color: var(--island); border-color: var(--island-ink); font-size: 18px; padding: 15px 26px; margin-bottom: 20px; }
