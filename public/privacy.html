@@ -25,13 +25,13 @@
 
 <main class="doc">
   <h1>Privacy policy</h1>
-  <p class="date">Effective October 20, 2026</p>
+  <p class="date">Effective November 3, 2026</p>
 
   <div class="short">
     <ul>
       <li>Tomte has no account, no analytics, no crash reporting and no update check. The developer receives nothing from it.</li>
       <li>What Tomte keeps stays on your PC.</li>
-      <li>Something leaves your PC only when you send it to an AI provider you set up, or open a link or a web search in your browser.</li>
+      <li>Something leaves your PC only when you send it to an AI provider you set up, translate text without a key, share with a phone through Tomte Drop over your local network, or open a link or a web search in your browser.</li>
     </ul>
   </div>
 
@@ -46,9 +46,11 @@
     <li>your scratchpad note;</li>
     <li>clipboard history, if you turn it on in Settings: the last 50 pieces of text and 50 images you copied from the past 7 days, the name of the app each one was copied from, and the items you pinned, which stay until you unpin them. Anything a password manager marks as private is never kept. Turning the history off deletes all of it, pins included;</li>
     <li>AI history: your questions, the answers and their cost, if you keep AI history on;</li>
-    <li>your shortcuts, scheduled jobs, and the things you opened from Search, so they rank first next time;</li>
-    <li>speech-to-text model files, if you add voice.</li>
+    <li>your shortcuts, scheduled jobs, reminders, scratchpad snippets, saved shelf sets, and the things you opened from Search, so they rank first next time;</li>
+    <li>speech-to-text model files, if you add voice;</li>
+    <li>the profile of Tomte's own browser window, in <code>%LOCALAPPDATA%\Tomte\Browser</code>, if you use it for jobs, including any sites you sign in to there.</li>
   </ul>
+  <p>Files and text a phone sends you with Tomte Drop are saved in <code>Downloads\Tomte Drop</code> and put on the Shelf.</p>
   <p>API keys you enter are stored in Windows Credential Manager, not in that folder.</p>
   <p>None of this is sent to the developer or to anyone else. You can clear the clipboard and AI history in Settings (Clear all keeps pinned clipboard items). Uninstalling Tomte and deleting that folder removes everything.</p>
 
@@ -56,12 +58,15 @@
   <p><strong>AI requests.</strong> AI is optional and off until you add a key. When you send a question, use Circle to ask, drop a file on a drop zone, or run a job you set up, Tomte sends the request straight from your PC to the provider you chose: Anthropic, Google Gemini, an OpenAI-compatible server, or a model running on your own PC such as Ollama. The request holds your question and only the context you included, such as the region you circled, a window's text, a screenshot, a Shelf file or your note. The AI box shows where each request went and what it cost. What the provider does with it is covered by that provider's own terms and privacy policy.</p>
   <p><strong>Search with AI</strong> sends the names of files, never what is in them.</p>
   <p><strong>Voice.</strong> By default your recording is turned into text on your PC with whisper.cpp and is not sent anywhere. If you choose a provider for speech-to-text instead, the recording goes to that provider.</p>
+  <p><strong>Translation.</strong> When you translate text from the screen, it goes to the AI provider you set up. With no provider, Translate sends the text to MyMemory, a free translation service by Translated, and the card says so before it sends; MyMemory keeps what it is sent under its own terms. Translate in browser opens Google Translate in your browser with the text.</p>
+  <p><strong>Tomte Drop.</strong> While you share with a phone, Tomte runs a small web server on your PC that answers only on your local network and only to requests carrying the code in the QR code. Files and text go straight between your PC and the phone; nothing goes through the internet or to the developer. The server stops when you press Stop sharing or quit Tomte.</p>
+  <p><strong>Web pages for AI.</strong> When an AI question or a scheduled job reads a web page or uses Tomte's own browser, Tomte loads those pages from their sites as a browser would. A job is held to the sites you approved when you made it.</p>
   <p><strong>MCP servers and Agent Skills</strong> you add are run or contacted only for requests you approve.</p>
   <p><strong>Links and web searches</strong> open in your browser, and the search engine you picked receives the search.</p>
   <p>Tomte sends nothing else: no analytics, telemetry, crash reports or update checks.</p>
 
   <h2>What Tomte reads from Windows</h2>
-  <p>To match your taskbar, Tomte reads whether Windows uses a light or dark theme, whether the accent colour shows on the taskbar, and the accent colour itself. It reads these from your Windows settings on your PC and sends them nowhere.</p>
+  <p>To match your taskbar, Tomte reads whether Windows uses a light or dark theme, whether the accent colour shows on the taskbar, and the accent colour itself. To show its mute button and call controls, it reads which app is using the microphone or the camera. It reads these on your PC and sends them nowhere.</p>
 
   <h2>Changes to your PC</h2>
   <p>Tomte can change settings such as dark mode or volume when you ask it to. It asks before each change, and you can undo it.</p>
